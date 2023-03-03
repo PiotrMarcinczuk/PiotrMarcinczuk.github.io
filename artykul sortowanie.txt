@@ -1,0 +1,13 @@
+1.w sekcji main w h3 pobieramy odnośnik z tytułem.
+
+2.tworzymy za pomoca js main wypelniony divami a w nich span, gdzie każdy div to litera alfabetu np.
+1div = A, 2div = B itd.
+
+3.pobieramy pierwszą litere tytulu z h3.
+
+4.Wstawiamy tytuly do odpowiednich pojemnikow.
+
+5.jeśli wstawilismy juz wszystkie tytuly to w każdym divie sprawdzamy dalej w kolejnosci alfabatycznej
+(wszystkie na A, ale drugie i kolejne litery inne)
+
+6.zmieniam szyk spanu i pierwsze alfabetycznie ustawiamy najwyzej

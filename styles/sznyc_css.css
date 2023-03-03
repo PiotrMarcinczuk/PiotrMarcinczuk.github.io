@@ -1,0 +1,237 @@
+body {
+  background-color: #1e1e1e;
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  height: 100px;
+  background-color: #171614;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+}
+nav #nav_logo {
+  width: 50%;
+  height: 100%;
+  color: #E1DEDA;
+  font-size: 60px;
+  text-align: left;
+}
+nav #nav_logo h1 {
+  margin: 0;
+}
+nav #nav_span {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+nav #nav_span hr {
+  border: 1px #F88181 solid;
+  height: 20px;
+  margin: 10px;
+}
+nav #nav_span .button_1 {
+  margin: 15px;
+  font-size: 30px;
+  font-family: "Kanit", sans-serif;
+  background-color: #171614;
+  border: 0;
+  cursor: pointer;
+}
+nav #nav_span .button_1:hover {
+  color: white;
+  transition-duration: 0.5s;
+  transform: scale(1.2);
+}
+nav #nav_span h1 {
+  height: 150px;
+  margin-top: 25px;
+}
+nav #nav_span a {
+  text-decoration: none;
+  color: black;
+}
+nav #nav_span a:hover {
+  color: white;
+}
+nav #button_mobile {
+  display: none;
+}
+nav #nav_bar {
+  display: none;
+}
+
+.content_div {
+  font-size: 44px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #1e1e1e;
+  margin-top: 50px;
+}
+main #opis {
+  width: 70%;
+  background-color: #171614;
+  padding: 4px;
+  height: auto;
+  box-shadow: 3px 3px 3px 0px;
+}
+main #opis a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+main #opis h3 a {
+  cursor: default;
+}
+main #opis ul {
+  font-size: 20px;
+  list-style: square;
+}
+main #opis .wiki_div {
+  padding: 8px;
+}
+main #opis #opis_postaci {
+  width: 95%;
+  margin: 0px;
+  height: 280px;
+  display: flex;
+}
+main #opis #opis_postaci #wstepny_opis {
+  width: 70%;
+  margin-right: 20px;
+}
+main #opis #opis_postaci #zdjecie_postaci {
+  width: 50%;
+  height: auto;
+  text-align: right;
+  font-size: 14px;
+}
+main #opis #opis_postaci #zdjecie_postaci a {
+  font-size: 15px;
+}
+main #opis #opis_postaci #zdjecie_postaci img {
+  border: 2px solid black;
+  transition: transform 0.5s;
+  overflow: hidden;
+}
+main #opis #opis_postaci #zdjecie_postaci img:hover {
+  transform: scale(1.2);
+}
+main #opis #opis_postaci #zdjecie_postaci figcaption {
+  margin-top: 15px;
+}
+main #opis hr {
+  border: 1px solid #CB7A7A;
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+footer #footer_part {
+  width: 50%;
+  height: 100%;
+}
+
+@media screen and (min-width: 801px) and (max-width: 1281px) {
+  nav #nav_logo {
+    width: 30%;
+  }
+  nav #nav_span {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+  }
+  nav #nav_span .button_1 {
+    font-size: 25px;
+    margin: 5px;
+  }
+  nav #button_mobile {
+    display: none;
+  }
+  nav #nav_bar {
+    display: none;
+  }
+  main {
+    width: 90%;
+  }
+  main #opis {
+    width: 100%;
+  }
+  main #opis #opis_postaci {
+    height: auto;
+  }
+}
+@media screen and (max-width: 900px) {
+  nav {
+    width: 100%;
+  }
+  nav #nav_logo {
+    width: 80%;
+  }
+  nav #nav_logo h1 {
+    font-size: 50px;
+  }
+  nav #nav_span {
+    display: none;
+  }
+  nav #button_mobile {
+    background-color: #171614;
+    width: 20%;
+    height: 60%;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    cursor: pointer;
+  }
+  nav #button_mobile img {
+    width: 40px;
+    height: 40px;
+  }
+  nav #button_mobile button {
+    background-color: #171614;
+    border: 0;
+  }
+  nav #nav_bar {
+    display: none;
+  }
+  main {
+    width: 100%;
+  }
+  main #opis {
+    width: 100%;
+    height: auto;
+  }
+  main #opis #opis_postaci {
+    display: block;
+    width: 100%;
+    height: 30%;
+  }
+  main #zdjecie_postaci {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+}/*# sourceMappingURL=sznyc_css.css.map */
