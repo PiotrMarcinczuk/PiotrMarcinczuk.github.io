@@ -1,1 +1,0 @@
-to strona sznycowa łaaaaaaaa
