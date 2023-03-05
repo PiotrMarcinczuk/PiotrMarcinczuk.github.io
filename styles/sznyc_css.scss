@@ -2,6 +2,7 @@ $background_color: #1e1e1e;
 $nav_color: #171614;
 $h_color: #E1DEDA;
 $default_font: 'Kanit', sans-serif;
+$font_color: #E6E9E8;
 
 body{
     background-color: $background_color;
@@ -12,14 +13,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
   }
 
-  @mixin font($font_color: #E1DEDA){
-    font-family: Arial, Helvetica, sans-serif;
+  @mixin font{
+    font-family: $default_font;
     font-size: 18px;
     color: $font_color;
-    text-decoration: none;
-   }  
+  }
 
 //    Nagłówek i jakieś bajery
 nav{
@@ -28,13 +29,15 @@ nav{
     background-color: $nav_color;
     display: flex;
     align-items: center;
-    padding-left: 25px;
+    position: fixed;
+    top: 0px;
 
     #nav_logo{
         width: 50%;
         height: 100%;
         color: $h_color;
         font-size: 60px;
+        margin-left: 15px;
         text-align: left;
         h1{
             margin: 0;
@@ -78,22 +81,23 @@ nav{
         }
 
         a:hover{
-            color: white;
+            color: $font_color;
         }
     }
 
     #button_mobile{
         display: none;
     }
+}
 
-    #nav_bar{
-        display: none;
-    }
+#nav_bar{
+    display: none;
 }
 //   Main, główny kontent
 .content_div{
     font-size: 44px;
 }
+
   main{
     display: flex;
     justify-content: center;
@@ -102,20 +106,22 @@ nav{
     flex-wrap: wrap;
     width: 100%;
     background-color: $background_color;
-    margin-top: 50px;
+    margin-top: 150px;
+
+    a{
+        text-decoration: none;
+        color: #233858;
+        font-weight: bold;
+        font-size: 20px;
+    }
 
     #opis{
         width: 70%;
         background-color: $nav_color;
         padding: 4px;
         height: auto;
-        box-shadow: 3px 3px 3px 0px;
-        a{
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-            font-size: 18px;
-        }
+        box-shadow: 3px 3px 3px 0px black;
+        font-size: 20px;
 
         h3{
             a{
@@ -131,39 +137,52 @@ nav{
         .wiki_div{
             padding: 8px;
         }
+        #wstep{
+            height: auto;
+        }
 
         #opis_postaci{
             width: 95%;
             margin: 0px; 
-            height: 280px;
+            height: auto;
             display: flex;
-            
+
             #wstepny_opis{
                 width: 70%;
-                margin-right: 20px;
+                height: 100%;
             }
             
             #zdjecie_postaci{
-                width: 50%;
-                height: auto;
+                width: 30%;
                 text-align: right;
                 font-size: 14px;
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
                 a{
                     font-size: 15px;
                 }
     
                 img{
-                    border: 2px solid black;
+                    border: 1px solid black;
                     transition: transform .5s;
                     overflow: hidden;
+                    width: 60%;
+                    height: 70%;
                 }
     
                 img:hover{
-                    transform: scale(1.2);
+                    transform: scale(1.1);
+                }
+
+                .place{
+                    width: 80%;
                 }
 
                 figcaption{
-                    margin-top: 15px;
+                    width: 60%;
+                    margin-top: 20px;
+                    text-align: center;
                 }
             }
         }
@@ -172,6 +191,7 @@ nav{
             border: 1px solid #CB7A7A;
         }
     }
+    @include font;
   }
 
 // Stopka i podpisy
@@ -208,11 +228,12 @@ nav{
         #button_mobile{
             display: none;
         }
-
-        #nav_bar{
-            display: none;
-        }
     }
+
+    #nav_bar{
+        display: none;
+    }
+
     main{
         width: 90%;
         #opis{
@@ -226,11 +247,16 @@ nav{
 
 // Dla mobilnych urządzeń (telefon)
 @media screen and (max-width: 900px){
-
     nav{
         width: 100%;
+        height: 300px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
         #nav_logo{
-            width: 80%;
+            width: 60%;
+            height: 30%;
             h1{
                 font-size: 50px;
             }
@@ -242,14 +268,20 @@ nav{
 
         #button_mobile{
             background-color: $nav_color;
-            width: 20%;
-            height: 60%;
-            display: block;
+            width: 50px;
+            height: 20%;
+            margin: 15px 15px 0px 0px;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 15px;
-            cursor: pointer;
+            justify-content: flex-end;
+            .script_button{
+                transition-duration: 0.5s;
+                cursor: pointer;
+            }
+
+            .script_button:hover{
+                transform: scale(1.2);
+            }
+
             img{
                 width: 40px;
                 height: 40px;
@@ -259,32 +291,74 @@ nav{
                 border: 0;
             }
         }
+    }
 
-        #nav_bar{
-            display: none;
-        }
+    #nav_bar{
+        display: none;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        ul{
+            width: 100%;
+            height: auto;
+            text-align: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            li{
+                .button_1{
+                    background-color: $nav_color;
+                    border: 0;
+                    border-bottom: 1px solid black;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 40px;
+                    margin: 5px 0px 5px 0px;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                    a:hover{
+                        color: white;
+                    }
+                }
+
+                .button_1:hover{
+                    // usunac color bo skonczeniu bo dubluje
+                    color: white; 
+                    transition-duration: 0.5s;
+                }
+            }
+
+            
+        }   
     }
     
     main{
         width: 100%;
+        margin-top: 360px;
         #opis{
-            width: 100%;
+            width: 95%;
             height: auto;
+
+            #wstep{
+                width: 100%;
+            }
+            
             #opis_postaci{
                 display: block;
                 width: 100%;
                 height: 30%;
-            }
-        }
 
-        #zdjecie_postaci{
-            display: none;
-            height: 0;
-            width: 0;
+                #zdjecie_postaci{
+                    display: none;
+                }
+            }
         }
     }
 }
 
-
-  
- 

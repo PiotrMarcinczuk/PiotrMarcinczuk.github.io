@@ -7,6 +7,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 nav {
@@ -15,13 +16,15 @@ nav {
   background-color: #171614;
   display: flex;
   align-items: center;
-  padding-left: 25px;
+  position: fixed;
+  top: 0px;
 }
 nav #nav_logo {
   width: 50%;
   height: 100%;
   color: #E1DEDA;
   font-size: 60px;
+  margin-left: 15px;
   text-align: left;
 }
 nav #nav_logo h1 {
@@ -60,12 +63,13 @@ nav #nav_span a {
   color: black;
 }
 nav #nav_span a:hover {
-  color: white;
+  color: #E6E9E8;
 }
 nav #button_mobile {
   display: none;
 }
-nav #nav_bar {
+
+#nav_bar {
   display: none;
 }
 
@@ -81,20 +85,24 @@ main {
   flex-wrap: wrap;
   width: 100%;
   background-color: #1e1e1e;
-  margin-top: 50px;
+  margin-top: 150px;
+  font-family: "Kanit", sans-serif;
+  font-size: 18px;
+  color: #E6E9E8;
+}
+main a {
+  text-decoration: none;
+  color: #233858;
+  font-weight: bold;
+  font-size: 20px;
 }
 main #opis {
   width: 70%;
   background-color: #171614;
   padding: 4px;
   height: auto;
-  box-shadow: 3px 3px 3px 0px;
-}
-main #opis a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
+  box-shadow: 3px 3px 3px 0px black;
+  font-size: 20px;
 }
 main #opis h3 a {
   cursor: default;
@@ -106,35 +114,47 @@ main #opis ul {
 main #opis .wiki_div {
   padding: 8px;
 }
+main #opis #wstep {
+  height: auto;
+}
 main #opis #opis_postaci {
   width: 95%;
   margin: 0px;
-  height: 280px;
+  height: auto;
   display: flex;
 }
 main #opis #opis_postaci #wstepny_opis {
   width: 70%;
-  margin-right: 20px;
+  height: 100%;
 }
 main #opis #opis_postaci #zdjecie_postaci {
-  width: 50%;
-  height: auto;
+  width: 30%;
   text-align: right;
   font-size: 14px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
 }
 main #opis #opis_postaci #zdjecie_postaci a {
   font-size: 15px;
 }
 main #opis #opis_postaci #zdjecie_postaci img {
-  border: 2px solid black;
+  border: 1px solid black;
   transition: transform 0.5s;
   overflow: hidden;
+  width: 60%;
+  height: 70%;
 }
 main #opis #opis_postaci #zdjecie_postaci img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+}
+main #opis #opis_postaci #zdjecie_postaci .place {
+  width: 80%;
 }
 main #opis #opis_postaci #zdjecie_postaci figcaption {
-  margin-top: 15px;
+  width: 60%;
+  margin-top: 20px;
+  text-align: center;
 }
 main #opis hr {
   border: 1px solid #CB7A7A;
@@ -169,7 +189,7 @@ footer #footer_part {
   nav #button_mobile {
     display: none;
   }
-  nav #nav_bar {
+  #nav_bar {
     display: none;
   }
   main {
@@ -185,9 +205,15 @@ footer #footer_part {
 @media screen and (max-width: 900px) {
   nav {
     width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   nav #nav_logo {
-    width: 80%;
+    width: 60%;
+    height: 30%;
   }
   nav #nav_logo h1 {
     font-size: 50px;
@@ -197,14 +223,18 @@ footer #footer_part {
   }
   nav #button_mobile {
     background-color: #171614;
-    width: 20%;
-    height: 60%;
-    display: block;
+    width: 50px;
+    height: 20%;
+    margin: 15px 15px 0px 0px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
+    justify-content: flex-end;
+  }
+  nav #button_mobile .script_button {
+    transition-duration: 0.5s;
     cursor: pointer;
+  }
+  nav #button_mobile .script_button:hover {
+    transform: scale(1.2);
   }
   nav #button_mobile img {
     width: 40px;
@@ -214,24 +244,60 @@ footer #footer_part {
     background-color: #171614;
     border: 0;
   }
-  nav #nav_bar {
+  #nav_bar {
     display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+  #nav_bar ul {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  #nav_bar ul li .button_1 {
+    background-color: #171614;
+    border: 0;
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    margin: 5px 0px 5px 0px;
+  }
+  #nav_bar ul li .button_1 a {
+    text-decoration: none;
+    color: black;
+  }
+  #nav_bar ul li .button_1 a:hover {
+    color: white;
+  }
+  #nav_bar ul li .button_1:hover {
+    color: white;
+    transition-duration: 0.5s;
   }
   main {
     width: 100%;
+    margin-top: 360px;
   }
   main #opis {
-    width: 100%;
+    width: 95%;
     height: auto;
+  }
+  main #opis #wstep {
+    width: 100%;
   }
   main #opis #opis_postaci {
     display: block;
     width: 100%;
     height: 30%;
   }
-  main #zdjecie_postaci {
+  main #opis #opis_postaci #zdjecie_postaci {
     display: none;
-    height: 0;
-    width: 0;
   }
 }/*# sourceMappingURL=sznyc_css.css.map */

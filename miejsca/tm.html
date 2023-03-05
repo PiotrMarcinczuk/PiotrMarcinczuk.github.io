@@ -8,7 +8,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="../script.js"></script>
     </head>
     <body>
         <!--naglowek /start-->
@@ -17,7 +16,7 @@
                 <h1>SznycWiki</h1>
             </section>
             <section id="button_mobile">
-                <button type="button"><img src="../images/button.png" class="script_button" alt="guzik do rozwinięcia list"></button>
+                <button type="button" data-target="nav_bar"><img src="../images/button.png" alt="guzik do rozwinięcia list"></button>
             </section>
             <section id="nav_span">
                 <button class="button_1"><a href="../index.html">Strona Główna</a></button>
@@ -30,35 +29,23 @@
                 <hr>
                 <button class="button_1"><a href="../artykuly.html">Artykuły</a></button>
             </section>
-            <!--Rozwijana lista guzik /start-->
-            <section id="nav_bar">
-            <ul>
-                <li><button class="button_1"><a href="../index.html">Strona Główna</a></button></li>
-                <li><button class="button_1">O nas</button></li>
-                <li><button class="button_1">Galeria</button></li>
-                <li><button class="button_1">Kontakt</button></li>
-                <li><button class="button_1"><a href="../artykuly.html">Artykuły</a></button></li>
-            </ul>
-            </section>
-            <!--Rozwijana lista guzik /koniec-->
+            <div id="nav_bar">
+                
+            </div>
         </nav>
-        <!--naglowek /koniec-->
         <main>
             <div id="opis">
                 <!--Wstępny opis postaci /start-->
                 <div id="wstep">
-                    <h3 class="tytul">Wojtek Szałkowski</h3>
+                    <h3 class="tytul">Technikum mechaniczne w Elblągu</h3>
                     <div id="opis_postaci" class="wiki_div">
                         <span id="wstepny_opis">
-                            Urodzony w 01.01.2001 prawdopodobnie w Elblągu, w którym dalej zamieszkuje na ulicy Wojciecha Kossaka, od wczesnych lat 
-                            Sznyc przejawiał ogromne zainteresowanie kobietami, <a href="https://pl.wikipedia.org/wiki/League_of_Legends">Leauge of Legends</a> i jedzeniem.
-                            Sznyc to niska persona posiadająca jedynie 90 kg wzrostu i 160cm masy. Wojtek ma 17 lat i uczy się w <a href="../miejsca/tm.html">technikum mechanicznym</a> w Elblągu.
-                            Sznyc interesuje się technologiami komputerowymi, grami video i piłką nożną. Na podstawie jego pseudonimu powstało słowo "sznyc", zazwyczaj słowo to oznacza
-                            wielkość danej rzeczy np. Sznyckoń oznacza bardzo dużego konia, zaimka "sznyc" możemy używać jak tylko chcemy.
+                            Placówka o wieloletniej tradycji, powstała w 1946 roku. Drugie najabrdziej uznane technikum w Eblągu
+                            zaraz po Zespole Szkół Techniczno Informatycznych tzw. ZSTI.
                         </span>
                         <section id="zdjecie_postaci">
-                            <img src="../images/sznyc.png" alt="sznyc w czasach młodości">
-                            <figcaption>Sznyc w dzieciństwie robi cosplay <a href="https://www.leagueoflegends.com/pl-pl/champions/graves/">gravesa</a></figcaption>
+                            <img src="../images/tm.png" class="place" alt="Technikum mechaniczne">
+                            <figcaption>Technikum mechaniczne od strony ul. Komeńskiego</figcaption>
                         </section>
                     </div>
                 </div>
@@ -66,12 +53,13 @@
                 <!--Wstępny opis postaci /koniec-->
                 <!--Osiagniecia postaci /start-->
                 <div id="osiagniecia" class="wiki_div">
-                    <h3>Osiągnięcia</h3>
+                    <h3>Opis</h3>
                     <span id="osiagniecia_postaci">
-                        <ul>
-                            <li>Jeden z lepszych graczy gragasa na świecie, w swojej życiowej dyspozycji 3 najlepszy gragas na świecie</li>
-                            <li>Rekord świata w zjedzeniu 482 cienkkich kebabów na czas</li>
-                        </ul>
+                        W technikum mechanicznym uczniowie zdobywają wiedzę i umiejętności z zakresu mechaniki, elektrotechniki,
+                        automatyki, informatyki, CAD/CAM, projektowania i konstrukcji maszyn oraz obróbki skrawaniem i spawania metali.
+                        W ramach zajęć praktycznych uczniowie korzystają z nowoczesnego sprzętu i narzędzi, które pozwalają
+                        na realizację projektów i zadań związanych z branżą mechaniczną.
+                        Po ukończeniu technikum mechanicznego absolwenci mają możliwość podjęcia pracy w zakładach produkcyjnych, firmach naprawczych, serwisach maszyn i urządzeń, a także w biurach projektowych lub na stanowiskach kierowniczych. Mogą również kontynuować naukę na studiach wyższych, na kierunkach związanych z mechaniką, automatyką, elektrotechniką, inżynierią produkcji lub zarządzaniem.
                     </span>
                 </div>
                 <hr>
@@ -81,7 +69,8 @@
                     <h3>Ważne wydarzenia</h3>
                     <span id="wydarzenia_postaci">
                         <ul>
-                            <li><a href="incydent.html">Incydent w drodze z piłki nożnej</a></li>
+                            <li>Bitwa na śnieżki</li>
+                            <li>Przyjęcie <a href="jan.html">Jana</a> i <a href="sznyc.html">Wojtka</a> do szkoły</li>
                         </ul>
                     </span>
                 </div>
@@ -92,18 +81,12 @@
                     <h3>Ciekawostki</h3>
                     <span id="ciekawostki_postaci">
                         <ul>
-                            <li>Zaimek "Sznyc" pasuje do każdego słowa</li>
-                            <li>W młodości Wojtek wpadł do opiekacza do kebabów stąd jego miłość do tego dania</li>
+                            <li>Mars od tyłu to sram</li>
                         </ul>
                     </span>
                 </div>
                 <!--Ciekawostki o postaci /koniec-->
             </div>
         </main>
-        <footer>
-            <div class="footer_part">
-                <span id="autorzy">Autorem strony: jest Piotr Marcińczuk</span>
-            </div>
-        </footer>
     </body>
 </html>

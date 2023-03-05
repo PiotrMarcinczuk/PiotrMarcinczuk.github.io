@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../script.js"></script>
     </head>
     <body>
         <!--naglowek /start-->
@@ -16,7 +17,7 @@
                 <h1>SznycWiki</h1>
             </section>
             <section id="button_mobile">
-                <button type="button" data-target="nav_bar"><img src="../images/button.png" alt="guzik do rozwinięcia list"></button>
+                <button type="button"><img src="../images/button.png" class="script_button" alt="guzik do rozwinięcia list"></button>
             </section>
             <section id="nav_span">
                 <button class="button_1"><a href="../index.html">Strona Główna</a></button>
@@ -29,49 +30,48 @@
                 <hr>
                 <button class="button_1"><a href="../artykuly.html">Artykuły</a></button>
             </section>
-            <div id="nav_bar">
-                
-            </div>
+            <!--Rozwijana lista guzik /start-->
+            <section id="nav_bar">
+            <ul>
+                <li><button class="button_1"><a href="../index.html">Strona Główna</a></button></li>
+                <li><button class="button_1">O nas</button></li>
+                <li><button class="button_1">Galeria</button></li>
+                <li><button class="button_1">Kontakt</button></li>
+                <li><button class="button_1"><a href="../artykuly.html">Artykuły</a></button></li>
+            </ul>
+            </section>
+            <!--Rozwijana lista guzik /koniec-->
         </nav>
         <!--naglowek /koniec-->
         <main>
             <div id="opis">
                 <!--Wstępny opis postaci /start-->
                 <div id="wstep">
-                    <h3 class="tytul"><a href="jan.html">Jan Stolarowicz</a></h3>
+                    <h3 class="tytul">Jan Stolarowicz</h3>
                     <div id="opis_postaci" class="wiki_div">
                         <span id="wstepny_opis">
-                            Urodzony 16 września 2006 roku w Elblągu, zamieszkały w <a href="pilona.html">Pilonie</a> naprzeciwko <a href="piotr.html">Piotra</a>. Według najnowszych doniesień posiada 197cm wzrostu i 1000kg masy ciała.  
+                            Urodzony 16 września 2006 roku w Elblągu, zamieszkały w <a href="../miejsca/pilona.html">Pilonie</a> naprzeciwko <a href="piotr.html">Piotra</a>. Według najnowszych doniesień posiada 197cm wzrostu i 1000kg masy ciała.  
                             Przez jego barwną przeszłość jest jedną z najbardziej hejtowanych osób w całej wsi, wynika to z faktu, że jest frajerem jebanym.
                             Mimo tego, że 18 lat kończy dopiero 16 września 2024 roku to ma na swoim koncie duże ilości
                             wypitego alkoholu i jeszcze większe ilości wypalonego tytoniu i innych dopalaczy. Jan posiada wiele barwnych zainteresowań min. kobiety, 
                             gry komputerowe, alkohol, ogrodnictwo, elektrotechnika, motoryzacja. Można by wymieniać dużo więcej ale nie mam tyle miejsca. To właśnie Jasiu
                             wprowadził <a href="sznyc.html">Sznyca</a> to kręgu pilońskiego. Dzięki temu czynowi można go określić mianem
-                            sznycpioniera. Jan posiada dwie siostry Martyne i Pauline, które kolejno mają 19 i 11 lat.
+                            sznycpioniera. Jan posiada dwie siostry Martyne i Pauline, które kolejno mają 19 i 11 lat. Jan od najmłodszych lat był znany społeczności Pilony, swoją kariere zaczął od grania w piłkę nożną na boisku w <a href="../miejsca/pilona.html">Pilonie</a>.
+                            Szybko okazało się że Jan jest wybitnym piłkarzem, więc wkrótce po tych wydarzeniach stary zapisał go do drużyny piłkarskiej Concordii Elbląg.
+                            Jasiu niejednokrotnie opowiadał swoje boiskowe historie, jednak po <a href="zlamanie.html">złamaniu nogi podczas sławnego starcia</a> okazało się, że
+                            Jan choruje na astmę, i w Concordii podawał wodę a nie grał w piłkę. Jasiu pozostał przy grze na pilońskim boisku. To właśnie w tym okresie zaczął
+                            interesować się grami komputerowymi min. <a href="https://pl.wikipedia.org/wiki/League_of_Legends">Leauge of Legends</a>, w które tak swoją drogą mimo przegranych 
+                            grubo ponad 1000 godzin jest ekstremalnie chujowy. W 2021 ukończył szkołe podstawową i zaczął uczyć się w <a href="../miejsca/tm.html">technikum mechanicznym</a> w Elblągu.
+                            Jasia hobby jest pomaganie staremu przy szkółce iglaków, gdzie rosną najlepsze jakościowo choinki. 
                         </span>
                         <section id="zdjecie_postaci">
                             <img src="../images/jan.png" alt="jan w kantorze">
                             <figcaption>Jan ze starym w kantorku</figcaption>
                         </section>
                     </div>
+                    <hr>
                 </div>
-                <hr>
                 <!--Wstępny opis postaci /koniec-->
-                <!--Historia postaci /start-->
-                <div id="historia" class="wiki_div">
-                    <h3>Życiorys</h3>
-                    <span id="historia_postaci">
-                        Jan od najmłodszych lat był znany społeczności Pilony, swoją kariere zaczął od grania w piłkę nożną na boisku w <a href="pilona.html">Pilonie</a>.
-                        Szybko okazało się że Jan jest wybitnym piłkarzem, więc wkrótce po tych wydarzeniach stary zapisał go do drużyny piłkarskiej Concordii Elbląg.
-                        Jasiu niejednokrotnie opowiadał swoje boiskowe historie, jednak po <a href="zlamanie.html">złamaniu nogi podczas sławnego starcia</a> okazało się, że
-                        Jan choruje na astmę, i w Concordii podawał wodę a nie grał w piłkę. Jasiu pozostał przy grze na pilońskim boisku. To właśnie w tym okresie zaczął
-                        interesować się grami komputerowymi min. <a href="https://pl.wikipedia.org/wiki/League_of_Legends">Leauge of Legends</a>, w które tak swoją drogą mimo przegranych 
-                        grubo ponad 1000 godzin jest ekstremalnie chujowy. W 2021 ukończył szkołe podstawową i zaczął uczyć się w <a href="tm.html">technikum mechanicznym</a> w Elblągu.
-                        Jasia hobby jest pomaganie staremu przy szkółce iglaków, gdzie rosną najlepsze jakościowo choinki. 
-                    </span>
-                </div>
-                <hr>
-                <!--Historia postaci /koniec-->
                 <!--Osiagniecia postaci /start-->
                 <div id="osiagniecia" class="wiki_div">
                     <h3>Osiągnięcia</h3>
@@ -92,7 +92,8 @@
                         <ul>
                             <li><a href="incydent.html">Incydent w drodze z piłki nożnej</a></li>
                             <li>Nocna piesza wycieczka do Elbląga w ferie zimowe</li>
-                            <li><a href="igloo.html">Budowa igloo</a></li>
+                            <li><a href="../wydarzenia/igloo.html">Budowa igloo</a></li>
+                            <li><a href="../wydarzenia/spisanie.html">Sikanie na dachu</a></li>
                         </ul>
                     </span>
                 </div>
@@ -107,6 +108,7 @@
                             <li>Jest niezwykle chujowy w myślenie</li>
                             <li>W 2019 roku 3 razy wyrzucił swój telefon w krzaki bez powodu</li>
                             <li>Jasiu bardzo szybko się denerwuje kiedy mówi się o jego związkach z kuzynkami</li>
+                            <li>W młodości kochał siedziech na drzewach i w śmietnikach</li>
                         </ul>
                     </span>
                 </div>

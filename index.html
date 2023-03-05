@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js"></script>
     </head>
     <body>
         <!--naglowek /start-->
@@ -17,7 +18,7 @@
                 <h3 class="tytul"><a href="sznyc.html">Albert</a></h3>
             </section>
             <section id="button_mobile">
-                <button type="button" data-target="nav_bar"><img src="./images/button.png" alt="guzik do rozwinięcia list"></button>
+                <button type="button"><img src="images/button.png" class="script_button" alt="guzik do rozwinięcia list"></button>
             </section>
             <section id="nav_span">
                 <button class="button_1"><a href="index.html">Strona Główna</a></button>
@@ -30,9 +31,21 @@
                 <hr>
                 <button class="button_1"><a href="artykuly.html">Artykuły</a></button>
             </section>
-            <div id="nav_bar">
-                
-            </div>
+            <!--Rozwijana lista guzik /start-->
+            <section id="nav_bar">
+                <ul>
+                    <li><button class="button_1"><a href="index.html">Strona Główna</a></button></li>
+                    <li><button class="button_1">O nas</button></li>
+                    <li><button class="button_1">Galeria</button></li>
+                    <li><button class="button_1">Kontakt</button></li>
+                    <li><button class="button_1"><a href="artykuly.html">Artykuły</a></button></li>
+                </ul>
+            </section>
+            <!--Rozwijana lista guzik /koniec-->
         </nav>
+        <!--naglowek /koniec-->
+        <main>
+            
+        </main>
     </body>
 </html>
