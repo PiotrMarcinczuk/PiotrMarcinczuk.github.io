@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Calculator</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="script.js" defer></script>
+        <script src="show.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <div id="calculator">
+                <div class="previous">
+                    <p></p>
+                </div>
+                <hr>
+                <div class="current">
+                    <p></p>
+                </div>
+                <hr>
+                <div id="calc_buttons">
+                    <button class="sign"><span>%</span></button>
+                    <button class="clear"><span>C</span></button>
+                    <button class="sign"><span>UNDO</span></button>
+                    <button class="sign"><span>1/x</span></button>
+                    <button class="sign"><span>&#172</span></button>
+                    <button class="sign"><span>&#247</span></button>       
+                    <button class="sign"><span>&#215</span></button>
+                    <button class="sign"><span>+</span></button>              
+                    <button class="sign"><span>-</span></button>
+                    <button class="number"><span>7</span></button>
+                    <button class="number"><span>8</span></button>
+                    <button class="number"><span>9</span></button>
+                    <button class="number"><span>4</span></button>
+                    <button class="number"><span>5</span></button>
+                    <button class="number"><span>6</span></button>
+                    <button class="number"><span>1</span></button>
+                    <button class="number"><span>2</span></button>
+                    <button class="number"><span>3</span></button>
+                    <button id="zero" class="number"><span>0</span></button>
+                    <button id="dot" class="number"><span>.</span></button>
+                    <button class="equal"><span>=</span></button>
+                </div>
+            </div>            
+            <div id="test">
+                <div id="tutorial">
+                    <h1>Calculator</h1>
+                    <span>
+                        My calculator has a two way to use math operations. First way is a operation without equal sign 
+                        If we click in sequence 5, +, 6 and another math sign like - or *, 
+                        we get a result previous operations (11- from previous sequence)(more specifically on github).
+                    </span>
+                    <br>
+                    <span>
+                        Second way is operation with '=' sign. If we click in sequence 1, +, 3, 
+                        and now click = we get result of operations below components with which result has create 
+                        (more specifically on github).
+                    </span>
+                </div>
+                <img src="jslogo.png" alt="javascript logo">
+                <div id="tutorial_div"></div>
+            </div>
+            <button id="report" onclick="show()"><a>Report bug</a></button>
+            <div id="bug_forms">
+                <form id="slowo" method="POST">
+                    <h2>Report bug or contact with me</h2>
+                    <label for="mail" class="all">Enter your email: </label>
+                    <input type="text" name="mail_text" class="all_input"><br>
+    
+                    <label for="nazwa" class="all">Enter your problem: </label>
+                    <input type="text" name="slowo_nazwa" class="all_input"><br>
+    
+                    <label for="opis" class="all">Descript your problem and tell me where he is occors and when: </label>
+                    <input type="text" name="description" id="description" class="all_input"><br>
+    
+                    <input type="submit" class="guzik" value="Send">
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
