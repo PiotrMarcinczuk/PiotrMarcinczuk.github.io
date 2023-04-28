@@ -8,10 +8,6 @@ require 'php/PHPMailer-master/src/SMTP.php';
 
 if(isset($_POST['mail_text'])) {
     $mail_text = $_POST['mail_text'];
-    $problem_name = $_POST['slowo_nazwa'];
-    $description = $_POST['slowo_opis'];
-
-    $mail_text = $_POST['mail_text'];
     $problem_name = $_POST['problem_name'];
     $description = $_POST['description'];
 
