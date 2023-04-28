@@ -438,14 +438,16 @@ main #bug_forms .guzik:hover {
     margin-top: 50px;
   }
 }
-@media only screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {
+  main {
+    overflow-y: hidden;
+  }
   main #calculator {
     overflow-y: hidden;
     position: absolute;
-    left: 30%;
+    left: 10%;
     top: 10%;
-    width: 50rem;
-    height: 40rem;
+    width: 20rem;
   }
   main #calculator .previous {
     overflow-y: hidden;
@@ -454,32 +456,38 @@ main #bug_forms .guzik:hover {
     overflow-y: hidden;
   }
   main #calculator #calc_buttons {
-    width: 25rem;
+    width: 20rem;
     height: 100%;
   }
   main #calculator #calc_buttons button {
-    width: 7.5rem;
+    width: 6rem;
     height: 3rem;
   }
   main #calculator #calc_buttons button span {
     overflow-y: hidden;
   }
   main #report {
-    top: 105%;
-    left: 35%;
+    top: 140%;
+    left: 10%;
   }
   main #test {
-    top: 69%;
-    right: 20%;
+    top: 95%;
+    right: 5%;
     position: absolute;
     height: 25rem;
+    width: 23rem;
   }
   main #test img {
     top: 55%;
   }
+  main #test #tutorial_div {
+    top: -95%;
+    left: 0;
+  }
   main #tutorial {
     text-align: center;
     width: 75%;
+    top: 0;
   }
   main #tutorial span {
     text-align: center;
@@ -488,8 +496,11 @@ main #bug_forms .guzik:hover {
     left: 12%;
     top: 5%;
   }
+  main #test:hover #tutorial h2 {
+    font-size: 25px;
+  }
   main #test:hover #tutorial span {
-    font-size: 12px;
+    font-size: 8px;
   }
   main #test:hover img {
     width: 130px;
@@ -498,7 +509,7 @@ main #bug_forms .guzik:hover {
   main #bug_forms {
     position: absolute;
     overflow-y: hidden;
-    top: 105%;
+    top: 140%;
     width: 100%;
     height: 550px;
   }
